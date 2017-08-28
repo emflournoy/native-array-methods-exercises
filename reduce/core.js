@@ -1,13 +1,23 @@
 function sum (array) {
-  // your code here
+  var sum = array.reduce(function(acc, val){
+    return acc+val;
+  },0)
+  return sum;
 };
 
 function productAll (array) {
-  // your code here
+  return array.reduce(function(outerAcc, outerValue){
+    return outerValue.reduce(function(innerAcc, innerVal){
+      return innerAcc*innerVal;
+    },1)
+  },1)
 };
 
 function objectify (array) {
-  // your code here
+  return array.reduce(function(acc,currentVal){
+    acc[currentVAl[0]] = currentVal[1];
+    return acc;
+  },{})
 };
 
 function luckyNumbers (array) {
